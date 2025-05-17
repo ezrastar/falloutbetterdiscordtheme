@@ -1,5 +1,12 @@
-/* Fallout Terminal Discord Theme – cleaned & organized */
+/* Bates Fallout Terminal Discord Theme – cleaned,organized and slightly improved by HeyItzSock */
 @import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
+/* Additional font packs */
+@import url("https://tinyurl.com/ybc8tm5o");
+@import url("https://tinyurl.com/y9ek2awo");
+@import url("https://tinyurl.com/ycdgtcef");
+@import url("https://tinyurl.com/ybuqovun");
+@import url("https://tinyurl.com/yapa5uq5");
+@import url("https://nfld99.github.io/Better-Discord/Source_Code/Addons/Use_Fonts/DiscordFont.css");
 
 /* --------------------------------------------------
    Root variables
@@ -123,9 +130,21 @@ body {
    ...Add more component tweaks below as needed
 -------------------------------------------------- */
 
-/* Clean duplicate selectors & fixed invalid rules:
-   - Removed duplicate --background-floating declarations
-   - Normalised alpha values (0‑1 instead of 0‑100%)
-   - Replaced invalid double definition of --button‑outline‑danger‑text
-   - Consolidated scrollbar vars
-*/
+/* Screen overlay scanlines */
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  pointer-events: none;
+  z-index: 2;
+  background:
+    linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
+    linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  background-size: 100% 2px, 3px 100%;
+}
+
+
